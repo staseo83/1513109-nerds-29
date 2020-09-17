@@ -1,39 +1,53 @@
-
+/*Глобальные стили*/
+p {
+    font-size: 16px;
+}
+h2 {
+font-weight: 500;
+font-size: 45px;
+line-height: 45px;
+}
+h3 {
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+}
+/*Общий стиль страницы*/
 .page-body {
 
 }
+/*Общий стиль шапки*/
 .main-header {
     background: #EEEEEE;
 }
+
+
 .main-navigation {
     
 
 }
-
+/*Стиль логотипа в шапке*/
 .main-header-logo {
 
     
     }
-
+/*Общий стиль горизонтального меню*/
 .site-navigation {
     display: inline-block;
     color: #000000;
     
 }
+/*Стиль разделов меню*/
 .nav-link {
     color: #000000;
 }
-
+/*Стиль корзины*/
 .cart-link {
     color: #000000;
 }
-
+/*Офортмление слайдера*/
 .slide1 {
-    position: absolute;
-width: 760px;
-height: 431px;
-left: 537px;
-top: 114px;
+
 }
 .container {
   
@@ -90,13 +104,13 @@ top: 114px;
 }
 
 }
-.feature-item {
+.service-item {
 
 }
-.servise-list {
+.service-list {
 
 }
-
+/*Класс преимуществ*/
 .advantages {
 
 }
@@ -107,7 +121,7 @@ top: 114px;
 .advantages-item {
 
 }
-
+/*Класс логотипы партнеров*/
 .partner-logos {
 
 }
@@ -138,16 +152,6 @@ top: 1843px;
 .footer-text {
 
 
-h2 {
-   
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 45px;
-line-height: 45px;
-display: flex;
-align-items: center;
-}
 
 .modal-login {
 
