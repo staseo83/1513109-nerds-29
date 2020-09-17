@@ -1,61 +1,108 @@
 /*Глобальные стили*/
+/* roboto-fonts */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v20-cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v20-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/roboto-v20-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/roboto-v20-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/roboto-v20-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/roboto-v20-cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+body {
+    min-width: 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-disoplay: swap;
+}
+
 p {
     font-size: 16px;
 }
-h2 {
-font-weight: 500;
-font-size: 45px;
-line-height: 45px;
-}
-h3 {
-font-weight: bold;
-font-size: 24px;
-line-height: 30px;
-}
-/*Общий стиль страницы*/
-.page-body {
 
+h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
 }
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+/*кастомные свойства*/
+
+:root {
+    --basic-color: #ffffff;
+    --accent-color: rgb(209, 209, 209);
+    --color: blue;
+}
+
+/*Общий стиль страницы*/
+
+.page-body {}
+
 /*Общий стиль шапки*/
+
 .main-header {
     background: #EEEEEE;
 }
 
+.main-navigation {}
 
-.main-navigation {
-    
-
-}
 /*Стиль логотипа в шапке*/
-.main-header-logo {
 
-    
-    }
+.main-header-logo {}
+
 /*Общий стиль горизонтального меню*/
+
 .site-navigation {
+    position: absolute;
+    text-decoration: none;
+    width: 437px;
+    height: 30px;
+    left: 502px;
+    top: 75px;
+}
+.site-navigation-item {
     display: inline-block;
     color: #000000;
-    
 }
+
 /*Стиль разделов меню*/
+
 .nav-link {
     color: #000000;
 }
+
 /*Стиль корзины*/
+
 .cart-link {
     color: #000000;
 }
+/* иконка корзины */
+.cart-icon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 1185px;
+    top: 82px;
+}
+
+
 /*Офортмление слайдера*/
-.slide1 {
 
-}
-.container {
-  
-}
+.slide1 {}
 
+.container {}
 
-.main-service {
-}
+.main-service {}
 
 .button {
     position: absolute;
@@ -67,6 +114,7 @@ line-height: 30px;
     background: #FB565A;
     border-radius: 3px;
 }
+
 .button1 {
     position: absolute;
     width: 160px;
@@ -77,6 +125,7 @@ line-height: 30px;
     background: #FB565A;
     border-radius: 3px;
 }
+
 .button2 {
     position: absolute;
     width: 160px;
@@ -87,6 +136,7 @@ line-height: 30px;
     background: #00CA74;
     border-radius: 3px;
 }
+
 .button3 {
     position: absolute;
     width: 160px;
@@ -99,67 +149,61 @@ line-height: 30px;
 }
 
 
+/*стиль полосок*/
+.rectangle {
+    position: absolute;
+    width: 1158px;
+    height: 2px;
+    left: 140px;
+    top: 1579px;
+    background: #EEEEEE;
+}
 .about {
-
+    background-color: var(--basic-color)
 }
 
 }
-.service-item {
 
-}
-.service-list {
+.service-item {}
 
-}
+.service-list {}
+
+.service-pic {}
+
 /*Класс преимуществ*/
-.advantages {
 
+.advantages-logo {
+    left: 940px;
+    top: 1093px;
 }
-.advantages-list {
 
-}
+.advantages-list {}
 
-.advantages-item {
+.advantages-item {}
 
-}
 /*Класс логотипы партнеров*/
-.partner-logos {
 
-}
-.logo-1-1 {
+.partner-logos {}
 
-}
+/*лого mishka*/
 
-.page-footer {
+.list-logo {}
 
-    }
+.logo-1-1 {}
 
-.footer-social {
+.page-footer {}
 
-}
-.social-button {
+.footer-socials {}
 
-
-}
+.social-button {}
 
 .map {
-top: 1843px;
-}
-
-.footer-title {
 
 }
+
+.footer-title {}
 
 .footer-text {
-
-
-
-.modal-login {
-
-}
-.modal-description {
-
-}
-
-.modal-close {
-
-}
+    .modal-login {}
+    .modal-description {}
+    .modal-close {}

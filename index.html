@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет магазин «Nerds»</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,15 +13,17 @@
     <nav class="main-navigation">
       <nav>
         <a>
-          <img src="https://via.placeholder.com/150x100" width="159" height="65" alt="логотип Нердс">
+          <img src="https://via.placeholder.com/150x100" width="159" height="65" alt="логотип Нердс в SVG">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation"><a class="nav-link" href="blank.html">СТУДИЯ</a></li>
-          <li class="site-navigation"><a class="nav-link" href="blank.html">КЛИЕНТЫ</a></li>
-          <li class="site-navigation"><a class="nav-link" href="catalog.html">МАГАЗИН</a></li>
-          <li class="site-navigation"><a class="nav-link" href="blank.html">КОНТАКТЫ</a></li>
+          <li class="site-navigation-item"><a class="nav-link" href="blank.html">СТУДИЯ</a></li>
+          <li class="site-navigation-item"><a class="nav-link" href="blank.html">КЛИЕНТЫ</a></li>
+          <li class="site-navigation-item"><a class="nav-link" href="catalog.html">МАГАЗИН</a></li>
+          <li class="site-navigation-item"><a class="nav-link" href="blank.html">КОНТАКТЫ</a></li>
         </ul>
-        <li class="site-navigation"></li><a class="cart-link" href="blank.html">корзина</a>
+        <img class="cart-icon" src="/Users/Stas/Desktop\1513109-nerds-29/img/Shape.svg" alt="иконка корзины ы svg">
+        <div
+       <a class="cart-link" href="blank.html">КОРЗИНА</a>
       </nav>
   </header>
   <main class="container">
@@ -34,7 +37,7 @@
       <li class="service-item">
         <div class="main-service">
           <a>
-            <img src="https://via.placeholder.com/150x100">
+            <img class="service-pic" src="https://via.placeholder.com/150x100">
           </a>
           <h3>ВЕБ САЙТЫ</h3>
           <p>Мир никогда не будет прежним<BR>после того как увидит ваш сайт!</p>
@@ -44,7 +47,7 @@
       <li class="service-item">
         <div class="main-service">
           <a>
-            <img src="https://via.placeholder.com/150x100">
+            <img class="service-pic" src="https://via.placeholder.com/150x100">
           </a>
           <h3>ПРИЛОЖЕНИЯ</h3>
           <p>Покорите топ-10 приложений в<BR>AppStore и Google Play</p>
@@ -54,7 +57,7 @@
       <li class="service-item">
         <div class="main-service">
           <a>
-            <img src="https://via.placeholder.com/150x100">
+            <img class="service-pic" src="https://via.placeholder.com/150x100">
           </a>
           <h3>ПРЕЗЕНТАЦИИ</h3>
           <p>Вы даже не подозреваете,<BR>насколько вы изумительны!!</p>
@@ -63,6 +66,7 @@
       </li>
     </ul>
     <!--полоска по середине-->
+    <div class="rectangle"></div>
     <!--о компании-->
     <section class="company">
       <div class="about">
@@ -76,7 +80,7 @@
           <li>Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
         <div class="advantages">
-          <img src="https://via.placeholder.com/150x100" width="360" height="208" alt="логотип справа">
+          <img class="advantages-logo" src="https://via.placeholder.com/150x100" width="360" height="208" alt="логотип Нердс справа над цифрами">
           <p>с 2004 года Любим точность во всем:</p>
           <ul class="advantages-list">
             <li class="advantages-item">
@@ -97,11 +101,11 @@
     <section class="partner-logos">
       <!--логотипы партнеров-->
       <!--полоска по середине-->
-      <ul>
-        <li class="logo-1-1"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого 1"></li>
-        <li class="logo-1-2"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого 2"></li>
-        <li class="logo-1-3"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого 3"></li>
-        <li class="logo-1-4"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого 4"></li>
+      <ul class="list-logo">
+        <li class="logo-1-1"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="логотип html acadevy"></li>
+        <li class="logo-1-2"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого borodinski"></li>
+        <li class="logo-1-3"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого pink"></li>
+        <li class="logo-1-4"> <img src="https://via.placeholder.com/150x100" width="199" height="90" alt="лого mishka"></li>
       </ul>
       <!--полоска по середине-->
     </section>
@@ -111,7 +115,7 @@
       <img src="https://via.placeholder.com/150x100" width="1440" height="416" alt="карта в подвале">
     </section>
     <section>
-      <ul class="footer-social">
+      <ul class="footer-socials">
         <li class="social-button"><a href="#">Вконтакте</a></li>
         <li class="social-button"><a href="#">Фейсбук</a></li>
         <li class="social-button"><a href="#">Инстаграм</a></li>
