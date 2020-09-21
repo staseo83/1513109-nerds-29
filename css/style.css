@@ -1,28 +1,27 @@
 /*Глобальные стили*/
+
 /* roboto-fonts */
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/roboto-v20-cyrillic-regular.eot'); /* IE9 Compat Modes */
-    src: local('Roboto'), local('Roboto-Regular'),
-         url('../fonts/roboto-v20-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/roboto-v20-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/roboto-v20-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/roboto-v20-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/roboto-v20-cyrillic-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-  }
+    src: url('../fonts/roboto-v20-cyrillic-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-v20-cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/roboto-v20-cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto-v20-cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/roboto-v20-cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/roboto-v20-cyrillic-regular.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
 body {
-    min-width: 
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;;
     font-style: normal;
-    font-weight: normal;
     font-disoplay: swap;
 }
 
-p {
-    font-size: 16px;
-}
 
 h2 {
     font-weight: 500;
@@ -35,14 +34,17 @@ h3 {
     font-size: 24px;
     line-height: 30px;
 }
-
+ 
 /*кастомные свойства*/
 
 :root {
-    --basic-color: #ffffff;
-    --accent-color: rgb(209, 209, 209);
-    --color: blue;
-}
+    --main-bg-color:#ffffff; // основной цвет фона на сайте
+    --accent-color: rgb(209, 209, 209); // цвет подтверждения, удачного 
+    --main-bg-red-color: #FB565A; // цвет фона красной кнопки
+    --main-bg-green-color: #00CA74; // цвет фона зеленой кнопки
+    --main-bg-yellow-color: #EFC849; / цвет фона желтой кнопки
+    --main-txt-color: #000000; / цвет основного текста
+    --main-bg-grey-color: #EEEEEE; / цвет фона в шапке на внутренних
 
 /*Общий стиль страницы*/
 
@@ -63,18 +65,19 @@ h3 {
 /*Общий стиль горизонтального меню*/
 
 .site-navigation {
-    position: absolute;
-    text-decoration: none;
-    width: 437px;
-    height: 30px;
-    left: 502px;
-    top: 75px;
-}
-.site-navigation-item {
-    display: inline-block;
-    color: #000000;
+    text-transform: uppercase;
+
 }
 
+.site-navigation-item {
+
+}
+
+/*Стиль подчеркивания раздела магазин в каталоге*/
+.underline-red {
+    text-decoration: underline color;
+    text-decoration-color:red;
+}
 /*Стиль разделов меню*/
 
 .nav-link {
@@ -86,7 +89,9 @@ h3 {
 .cart-link {
     color: #000000;
 }
+
 /* иконка корзины */
+
 .cart-icon {
     position: absolute;
     width: 15px;
@@ -94,7 +99,6 @@ h3 {
     left: 1185px;
     top: 82px;
 }
-
 
 /*Офортмление слайдера*/
 
@@ -115,41 +119,20 @@ h3 {
     border-radius: 3px;
 }
 
-.button1 {
-    position: absolute;
-    width: 160px;
-    height: 50px;
-    left: 140px;
-    top: 922px;
-    color: #FFFFFF;
-    background: #FB565A;
-    border-radius: 3px;
+.button-web-site {
+
 }
 
-.button2 {
-    position: absolute;
-    width: 160px;
-    height: 50px;
-    left: 540px;
-    top: 922px;
-    color: #FFFFFF;
-    background: #00CA74;
-    border-radius: 3px;
+.button-presentations {
+
 }
 
-.button3 {
-    position: absolute;
-    width: 160px;
-    height: 50px;
-    left: 940px;
-    top: 922px;
-    color: #FFFFFF;
-    background: #EFC849;
-    border-radius: 3px;
-}
+.button {
 
+}
 
 /*стиль полосок*/
+
 .rectangle {
     position: absolute;
     width: 1158px;
@@ -158,6 +141,7 @@ h3 {
     top: 1579px;
     background: #EEEEEE;
 }
+
 .about {
     background-color: var(--basic-color)
 }
@@ -193,17 +177,42 @@ h3 {
 
 .page-footer {}
 
-.footer-socials {}
+/*кнопки соц сетей*/
+.socials-ico {}
 
-.social-button {}
+.social-vk {
 
+}
+
+.social-fb {
+
+}
+
+.social-in {
+
+}
+
+/*фон карты*/
 .map {
+    width: 1440px;
+    height: 416px;
+    background: url(https://via.placeholder.com/150x100);
+}
 
+.text-map {
+    background-color: #FFFFFF;
+    width: 230px;
+    height: 72px;
+    line-height: 18px;
+    
 }
 
 .footer-title {}
 
 .footer-text {
+    width: 373px;
+    height: 22px;
+}
     .modal-login {}
     .modal-description {}
     .modal-close {}
