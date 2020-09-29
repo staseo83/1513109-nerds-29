@@ -1,10 +1,10 @@
 @font-face {
     font-family: "Roboto", sans-serif;
-    src: local ("Roboto"), 
-    url("fonts/roboto") format("woff2");
+    src: local ("Roboto"), url("fonts/roboto") format("woff2");
 }
 
 /* Variables кастомные свойства*/
+
 :root {
     /* цвет фона */
     --main-bg-color: #ffffff;
@@ -19,157 +19,267 @@
     --main-txt-color: #000000;
     /* цвет фона в шапке на внутренних */
     --main-bg-grey-color: #EEEEEE;
+}
 
+/* Global */
 
-    /* Global */
-    body {
-        font-family: "Roboto", sans-serif;
-        text-transform: uppercase;
-        background-color: var(--main-bg-color);
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
-    h2 {
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--main-bg-color);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
 
+h2 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+}
 
-    }
-    h3 {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-    }
-    a {
-        text-decoration: none;
-    }
-    /*Общий стиль страницы*/
-    .page-body {
-        min-width: 100%;
-        display: grid;
-        grid-template-rows: min-content 1fr min-content;
-        align-content: start;
-    }
-    /*Общий стиль шапки*/
-    .main-header {
-        background: #EEEEEE;
-    }
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
 
-    .main-navigation {
-        display: grid;
-        .main-nanigation-wrapper {}
+a {
+    text-decoration: none;
+}
 
-        /*Стиль логотипа в шапке*/
-        .main-header-logo {
-            outline: rgb(255, 0, 0, 0.3);
-            justify-self: left;
-            outline-offset: -5px;
-        }
-        /*Общий стиль горизонтального меню*/
-        .site-navigation {
-            text-transform: uppercase;
-        }
-        .site-navigation-item {
-            text-transform: uppercase;
-        }
-        /*Стиль подчеркивания раздела магазин в каталоге*/
-        .underline-red {
-            text-decoration: underline color;
-            text-decoration-color: red;
-        }
-        /*Стиль разделов меню*/
-        .nav-link {
-            color: #000000;
-        }
-        /*Стиль корзины*/
-        .cart-link {
-            color: #000000;
-        }
-        /* иконка корзины */
-        .cart-icon {
-            width: 15px;
-            height: 15px;
-            left: 1185px;
-            top: 82px;
-        }
-        /*Офортмление слайдера*/
-        .slide1 {}
-        .container {
-            outline: rgb(255, 0, 0, 0.3);
-        }
-        .main-service {}
-        .button {
-            width: 240px;
-            height: 50px;
-            left: 140px;
-            top: 415px;
-            color: #FFFFFF;
-            background: #FB565A;
-            border-radius: 3px;
-        }
-        .button-web-site {}
-        .button-presentations {}
-        .button {}
-        /*стиль полосок*/
-        .rectangle {
-            position: absolute;
-            width: 1158px;
-            height: 2px;
-            left: 140px;
-            top: 1579px;
-            background: #EEEEEE;
-        }
-        .about {
-            background-color: var(--basic-color)
-        }
-    }
-    .service-item {}
-    .service-list {
-        outline: 5px solid rgba(255, 0, 0, 0.3);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .service-pic {}
-    /*Класс преимуществ*/
-    .advantages-logo {
-        left: 940px;
-        top: 1093px;
-    }
-    .advantages-list {}
-    .advantages-item {}
-    /*Класс логотипы партнеров*/
-    .partner-logos {}
-    /*лого mishka*/
-    .list-logo {}
-    .logo-1-1 {}
-    .page-footer {
-        outline: 5px solid rgba(0, 255, 255, 0.7);
-    }
-    /*кнопки соц сетей*/
-    .socials-ico {
-        outline: 5px solid rgba(0, 255, 255, 0.7);
-    }
-    .social-vk {}
-    .social-fb {}
-    .social-in {}
-    /*фон карты*/
-    .map {
-        width: 1440px;
-        height: 416px;
-        background: url(https://via.placeholder.com/150x100);
-    }
-    .text-map {
-        background-color: #FFFFFF;
-        width: 230px;
-        height: 72px;
-        line-height: 18px;
-    }
-    .main-footer {
-        outline: 5px solid: rgb(red, green, blue);
-    }
-    .footer-title {}
-    .footer-text {
-        width: 373px;
-        height: 22px;
-    }
-    .modal-login {}
-    .modal-description {}
-    .modal-close {}
+/*Общий стиль страницы*/
+
+.page-body {
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+/*Общий стиль шапки*/
+
+.main-header {
+    background: #EEEEEE;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--basic-white);
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
+    background-color: transparent;
+}
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Стиль логотипа в шапке*/
+
+.main-header-logo {
+    outline: rgb(255, 0, 0, 0.3);
+    justify-self: left;
+    outline-offset: -5px;
+}
+
+/*Общий стиль горизонтального меню*/
+
+.site-navigation {
+    text-transform: uppercase;
+}
+
+.site-navigation-item {
+    text-transform: uppercase;
+}
+
+/*Стиль подчеркивания раздела магазин в каталоге*/
+
+.underline-red {
+    text-decoration: underline color;
+    text-decoration-color: red;
+}
+
+/*Стиль разделов меню*/
+
+.nav-link {
+    color: #000000;
+}
+
+/*Стиль корзины*/
+
+.cart-link {
+    color: #000000;
+}
+
+/* иконка корзины */
+
+.cart-icon {
+    width: 15px;
+    height: 15px;
+    left: 1185px;
+    top: 82px;
+}
+
+.user-navigation {
+    max-width: 140px;
+    outline: 5px solid rgba(255, 0, 255, 0.3);
+    outline-offset: -5px;
+}
+
+/*Офортмление слайдера*/
+
+.main-slider-1 {
+    width: 1157px;
+}
+
+.text-slider {
+    width: 400px;
+    height: 49px;
+    left: 140px;
+    top: 363px;
+}
+
+.hello-slider {
+    outline: 5px solid rgba(255, 208, 0, 0.753);
+}
+
+/*сам слайд*/
+
+.slide1 {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    outline: rgb(255, 0, 0, 0.3);
+}
+
+.main-service {}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: space-around;
+}
+
+.button {
+    width: 240px;
+    height: 50px;
+    left: 140px;
+    top: 415px;
+    color: #FFFFFF;
+    background: #FB565A;
+    border-radius: 3px;
+}
+
+.button-web-site {}
+
+.button-presentations {}
+
+.button {}
+
+/*стиль полосок*/
+
+.about {
+    background-color: var(--basic-color)
+}
+
+.title-about {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+}
+
+.service-item {}
+
+.service-list {
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service-pic {}
+
+/*Класс преимуществ*/
+
+.advantages-logo {
+    left: 940px;
+    top: 1093px;
+}
+
+.advantages-list {}
+
+.advantages-item {}
+
+/*Класс логотипы партнеров*/
+
+.partner-logos {}
+
+/*лого mishka*/
+
+.list-logo {}
+
+.logo-1-1 {}
+
+.page-footer {
+    outline: 5px solid rgba(0, 255, 255, 0.7);
+}
+
+/*кнопки соц сетей*/
+
+.socials-ico {
+    outline: 5px solid rgba(0, 255, 255, 0.7);
+}
+
+.social-vk {}
+
+.social-fb {}
+
+.social-in {}
+
+/*фон карты*/
+
+.map {
+    width: 1440px;
+    height: 416px;
+    background: url(https://via.placeholder.com/150x100);
+}
+
+.text-map {
+    background-color: #FFFFFF;
+    width: 230px;
+    height: 72px;
+    line-height: 18px;
+}
+
+.main-footer {
+    outline: 5px solid: rgb(red, green, blue);
+}
+
+.footer-title {}
+
+.footer-text {
+    width: 373px;
+    height: 22px;
+}
+
+.modal-login {}
+
+.modal-description {}
+
+.modal-close {}
+
+.filters {
+    outline-offset: -5px;
+    outline: 5px solid rgba(255, 0, 255, 0.7);
+}
+
+.filter fieldset:first-child {
+    margin-bottom: 35px;
+}
