@@ -19,27 +19,20 @@
     --main-txt-color: #000000;
     /* цвет фона в шапке на внутренних */
     --main-bg-grey-color: #EEEEEE;
+    --social-bg-grey-color:  #A6A6A6;
+    --text-decoration-color: red;
+    --cart-link-color: #000000;
 }
 
 /* Global */
+
+
 
 body {
     font-family: "Roboto", sans-serif;
     background-color: var(--main-bg-color);
     background-position: top center;
     background-repeat: no-repeat;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 55px;
-}
-
-h3 {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
 }
 
 a {
@@ -49,16 +42,12 @@ a {
 /*Общий стиль страницы*/
 
 .page-body {
-    min-width: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
 }
 
 /*Общий стиль шапки*/
 
 .main-header {
-    background: #EEEEEE;
+    background-color: var(--main-bg-grey-color) 
 }
 
 .main-navigation {
@@ -71,6 +60,10 @@ a {
     outline: 5px solid rgba(0, 255, 255, 0.3);
     outline-offset: -5px;
     background-color: transparent;
+}
+
+.main-navigation a{
+display: block;
 }
 
 .main-navigation-wrapper .container {
@@ -100,19 +93,25 @@ a {
 
 .underline-red {
     text-decoration: underline color;
-    text-decoration-color: red;
+    color: var(--text-decoration-color);
 }
 
 /*Стиль разделов меню*/
 
 .nav-link {
     color: #000000;
+    position: absolute;
+    background-image: url("img/cart.svg");
+    left: 82.29%;
+    right: 16.67%;
+    top: 3.31%;
+    bottom: 96.24%;
 }
 
 /*Стиль корзины*/
 
 .cart-link {
-    color: #000000;
+    color: var(--cart-link-color);
 }
 
 /* иконка корзины */
@@ -167,21 +166,11 @@ a {
     justify-content: space-around;
 }
 
-.button {
-    width: 240px;
-    height: 50px;
-    left: 140px;
-    top: 415px;
-    color: #FFFFFF;
-    background: #FB565A;
-    border-radius: 3px;
-}
 
 .button-web-site {}
 
 .button-presentations {}
 
-.button {}
 
 /*стиль полосок*/
 
@@ -194,23 +183,14 @@ a {
     line-height: 45px;
 }
 
+.service-pic {
+
 }
-
-.service-item {}
-
-.service-list {
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.service-pic {}
 
 /*Класс преимуществ*/
 
 .advantages-logo {
-    left: 940px;
-    top: 1093px;
+
 }
 
 .advantages-list {}
@@ -233,33 +213,17 @@ a {
 
 /*кнопки соц сетей*/
 
-.socials-ico {
+.footer-social li {
     outline: 5px solid rgba(0, 255, 255, 0.7);
+    background-color: var(--social-bg-grey-color);
+    border-radius: 50%;
 }
-
-.social-vk {}
-
-.social-fb {}
-
-.social-in {}
 
 /*фон карты*/
 
-.map {
-    width: 1440px;
-    height: 416px;
-    background: url(https://via.placeholder.com/150x100);
-}
-
-.text-map {
-    background-color: #FFFFFF;
-    width: 230px;
-    height: 72px;
-    line-height: 18px;
-}
 
 .main-footer {
-    outline: 5px solid: rgb(red, green, blue);
+
 }
 
 .footer-title {}
@@ -275,11 +239,14 @@ a {
 
 .modal-close {}
 
-.filters {
+.filter {
     outline-offset: -5px;
     outline: 5px solid rgba(255, 0, 255, 0.7);
 }
-
+.filter-option-label {
+    position: relative;
+    display:block
+}
 .filter fieldset:first-child {
     margin-bottom: 35px;
 }
