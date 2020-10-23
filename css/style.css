@@ -1,5 +1,7 @@
 @font-face {
     font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
     src: local ("Roboto"), url("fonts/roboto") format("woff2");
 }
 
@@ -8,28 +10,44 @@
 :root {
     /* цвет фона */
     --main-bg-color: #ffffff;
-    --accent-color: rgb(209, 209, 209);
-    /* цвет фона красных кнопок */
-    --main-bg-red-color: #FB565A;
-    /* цвет фона зеленой кнопки */
-    --main-bg-green-color: #00CA74;
-    /* цвет фона желтой кнопки */
-    --main-bg-yellow-color: #EFC849;
     /* основной цвет текста */
     --main-txt-color: #000000;
     /* цвет фона в шапке на внутренних */
     --main-bg-grey-color: #EEEEEE;
-    --social-bg-grey-color:  #A6A6A6;
-    --text-decoration-color: red;
+    --social-bg-grey-color: #A6A6A6;
+    /* серые кнопки */
+    --grey-lihgt-btn-color: #EEEEEE;
+    --grey-medium-btn-color: #DFDFDF;
+    --grey-btn-color: #D5D5D5;
     --cart-link-color: #000000;
+    /* цвет фона кнопок */
+    --bottom-red: #D7373B;
+    --bottom-medium-red: #E74246;
+    --bottom-light-red: #FB565A;
+    --bottom-green: #00AA62;
+    --bottom-medium-green: #00BC6C;
+    --bottom-light-green: #00CA74;
+    --bottom-yellow: #E5A722;
+    --bottom-medium-yellow: #EAB534;
+    --bottom-light-yellow: #EFC84A;
+    --bottom-social: #E1E1E1;
+    /* цвета фильтра */
+    --path: #4D4D4D;
+    --shape1: #231F20;
+    --shape1: #A6A6A6;
 }
 
 /* Global */
 
-
-
 body {
+    min-width: 1157px;
+    margin: 0;
+    padding: 0;
     font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: none;
     background-color: var(--main-bg-color);
     background-position: top center;
     background-repeat: no-repeat;
@@ -39,15 +57,19 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 /*Общий стиль страницы*/
 
-.page-body {
-}
+.page-body {}
 
 /*Общий стиль шапки*/
 
 .main-header {
-    background-color: var(--main-bg-grey-color) 
+    background-color: var(--main-bg-grey-color)
 }
 
 .main-navigation {
@@ -62,8 +84,8 @@ a {
     background-color: transparent;
 }
 
-.main-navigation a{
-display: block;
+.main-navigation a {
+    display: block;
 }
 
 .main-navigation-wrapper .container {
@@ -166,11 +188,9 @@ display: block;
     justify-content: space-around;
 }
 
-
 .button-web-site {}
 
 .button-presentations {}
-
 
 /*стиль полосок*/
 
@@ -183,15 +203,11 @@ display: block;
     line-height: 45px;
 }
 
-.service-pic {
-
-}
+.service-pic {}
 
 /*Класс преимуществ*/
 
-.advantages-logo {
-
-}
+.advantages-logo {}
 
 .advantages-list {}
 
@@ -221,10 +237,7 @@ display: block;
 
 /*фон карты*/
 
-
-.main-footer {
-
-}
+.main-footer {}
 
 .footer-title {}
 
@@ -243,10 +256,14 @@ display: block;
     outline-offset: -5px;
     outline: 5px solid rgba(255, 0, 255, 0.7);
 }
+
 .filter-option-label {
     position: relative;
-    display:block
+    display: block
 }
+
 .filter fieldset:first-child {
     margin-bottom: 35px;
 }
+
+1111
