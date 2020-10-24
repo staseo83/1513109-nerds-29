@@ -40,10 +40,10 @@
 /* Global */
 
 body {
-    min-width: 1157px;
+    min-width: 1160px;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", "Tahoma", sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: normal;
@@ -75,18 +75,16 @@ img {
 .main-navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-    line-height: 20px;
     color: var(--basic-white);
     outline: 5px solid rgba(0, 255, 255, 0.3);
     outline-offset: -5px;
     background-color: transparent;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--main-txt-color);
 }
 
-.main-navigation a {
-    display: block;
-}
+.main-navigation a {}
 
 .main-navigation-wrapper .container {
     display: flex;
@@ -105,25 +103,22 @@ img {
 
 .site-navigation {
     text-transform: uppercase;
+    list-style: none;
 }
 
+.site-navigation-current a:not([href]) {
+    background-color: var(--basic-black);
+  }
 .site-navigation-item {
     text-transform: uppercase;
+    list-style: none;
 }
 
 /*Стиль подчеркивания раздела магазин в каталоге*/
 
-.underline-red {
-    text-decoration: underline color;
-    color: var(--text-decoration-color);
-}
-
 /*Стиль разделов меню*/
 
 .nav-link {
-    color: #000000;
-    position: absolute;
-    background-image: url("img/cart.svg");
     left: 82.29%;
     right: 16.67%;
     top: 3.31%;
@@ -139,6 +134,7 @@ img {
 /* иконка корзины */
 
 .cart-icon {
+    background-image: url("img/cart.svg");
     width: 15px;
     height: 15px;
     left: 1185px;
@@ -177,6 +173,7 @@ img {
 
 .container {
     outline: rgb(255, 0, 0, 0.3);
+    background-color: var(--grey-lihgt-btn-color);
 }
 
 .main-service {}
@@ -227,6 +224,13 @@ img {
     outline: 5px solid rgba(0, 255, 255, 0.7);
 }
 
+.map {
+    outline: rgb(255, 0, 0, 0.3);
+    background-color: var(--grey-lihgt-btn-color);
+    left: 0px;
+    top: 1843px;
+}
+
 /*кнопки соц сетей*/
 
 .footer-social li {
@@ -265,5 +269,3 @@ img {
 .filter fieldset:first-child {
     margin-bottom: 35px;
 }
-
-1111
