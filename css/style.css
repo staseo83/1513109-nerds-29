@@ -19,7 +19,6 @@
     --grey-lihgt-btn-color: #EEEEEE;
     --grey-medium-btn-color: #DFDFDF;
     --grey-btn-color: #D5D5D5;
-    --cart-link-color: #000000;
     /* цвет фона кнопок */
     --bottom-red: #D7373B;
     --bottom-medium-red: #E74246;
@@ -29,7 +28,7 @@
     --bottom-light-green: #00CA74;
     --bottom-yellow: #E5A722;
     --bottom-medium-yellow: #EAB534;
-    --bottom-light-yellow: #EFC84A;
+    --bottom-light-yellow: #EFC849;
     --bottom-social: #E1E1E1;
     /* цвета фильтра */
     --path: #4D4D4D;
@@ -62,10 +61,6 @@ img {
     height: auto;
 }
 
-/*Общий стиль страницы*/
-
-.page-body {}
-
 /*Общий стиль шапки*/
 
 .main-header {
@@ -73,22 +68,25 @@ img {
 }
 
 .main-navigation {
-    display: flex;
-    flex-direction: column;
-    color: var(--basic-white);
+    color: var(--main-txt-color);
     outline: 5px solid rgba(0, 255, 255, 0.3);
     outline-offset: -5px;
     background-color: transparent;
     font-size: 16px;
     line-height: 30px;
+    font-weight: 500;
+}
+
+.site-navigation a, .main-navigation a {
     color: var(--main-txt-color);
 }
 
-.main-navigation a {}
+.site-navigation a:hover, .cart-link:hover {
+    color: var(--bottom-light-red);
+}
 
-.main-navigation-wrapper .container {
-    display: flex;
-    justify-content: space-between;
+.site-navigation a:focus, .cart-link:focus {
+    color: var(--social-bg-grey-color);
 }
 
 /*Стиль логотипа в шапке*/
@@ -99,7 +97,18 @@ img {
     outline-offset: -5px;
 }
 
+.main-header-logo a:hover {
+    color: var(--main-txt-color);
+}
+
+.main-header-logo a:focus {
+    color: var(--social-bg-grey-color);
+    background-image: url("img/nerds-logo gray.svg");
+}
+
 /*Общий стиль горизонтального меню*/
+
+/*Стиль разделов меню*/
 
 .site-navigation {
     text-transform: uppercase;
@@ -108,75 +117,89 @@ img {
 
 .site-navigation-current a:not([href]) {
     background-color: var(--basic-black);
-  }
+}
+
 .site-navigation-item {
     text-transform: uppercase;
     list-style: none;
 }
 
-/*Стиль подчеркивания раздела магазин в каталоге*/
-
-/*Стиль разделов меню*/
-
-.nav-link {
-    left: 82.29%;
-    right: 16.67%;
-    top: 3.31%;
-    bottom: 96.24%;
-}
-
-/*Стиль корзины*/
+/*Стиль значка корзины*/
 
 .cart-link {
-    color: var(--cart-link-color);
+    text-transform: uppercase;
 }
 
 /* иконка корзины */
 
 .cart-icon {
-    background-image: url("img/cart.svg");
-    width: 15px;
-    height: 15px;
     left: 1185px;
     top: 82px;
-}
-
-.user-navigation {
-    max-width: 140px;
-    outline: 5px solid rgba(255, 0, 255, 0.3);
-    outline-offset: -5px;
 }
 
 /*Офортмление слайдера*/
 
 .main-slider-1 {
-    width: 1157px;
+    background-color: var(--grey-lihgt-btn-color);
+}
+
+.hello-slider {
+    outline: 5px solid rgba(255, 208, 0, 0.753);
+    width: 538px;
+    height: 111px;
+    left: 140px;
+    top: 192px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
 }
 
 .text-slider {
     width: 400px;
     height: 49px;
     left: 140px;
-    top: 363px;
+    top: 328px;
+    line-height: 24px;
+    font-size: 16px;
 }
 
-.hello-slider {
-    outline: 5px solid rgba(255, 208, 0, 0.753);
+.button-learn-more {
+    width: 240px;
+    height: 50px;
+    left: 140px;
+    top: 415px;
+    background: var(--bottom-light-red);
+    border-radius: 3px;
+}
+
+.button-learn-more a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--main-bg-color);
+    text-decoration: none;
 }
 
 /*сам слайд*/
 
-.slide1 {
-    display: flex;
-    align-items: center;
-}
-
 .container {
     outline: rgb(255, 0, 0, 0.3);
-    background-color: var(--grey-lihgt-btn-color);
 }
 
-.main-service {}
+.main-service {
+    background: var(--main-bg-color);
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
 
 .flex-container {
     display: flex;
@@ -185,14 +208,58 @@ img {
     justify-content: space-around;
 }
 
-.button-web-site {}
+.button-red {
+    background: var(--bottom-light-red);
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--main-bg-color);
+}
 
-.button-presentations {}
+.button-green {
+    background: var(--bottom-light-green);
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--main-bg-color);
+}
+
+.button-yellow {
+    background: var(--bottom-light-yellow);
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--main-bg-color);
+}
+
+.service-list p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
 
 /*стиль полосок*/
 
 .about {
-    background-color: var(--basic-color)
+    background: var(--main-bg-color);
+}
+
+.about h2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.order-list {
+    list-style: none;
+    color: #283136;
+}
+
+.order-list li {}
+
+.mini-title-about {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .title-about {
@@ -200,15 +267,37 @@ img {
     line-height: 45px;
 }
 
-.service-pic {}
-
 /*Класс преимуществ*/
 
-.advantages-logo {}
+.advantages-logo {
+    left: 940px;
+    top: 1093px;
+}
 
-.advantages-list {}
+.advantages-list {
+    list-style: none;
+}
 
-.advantages-item {}
+.advantages-item {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 64px;
+}
+
+.title-advantages {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cif {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 64px;
+}
 
 /*Класс логотипы партнеров*/
 
@@ -216,7 +305,9 @@ img {
 
 /*лого mishka*/
 
-.list-logo {}
+.list-logo {
+    list-style: none;
+}
 
 .logo-1-1 {}
 
@@ -243,7 +334,20 @@ img {
 
 .main-footer {}
 
-.footer-title {}
+.footer-info h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    align-items: center;
+}
+
+.main-footer h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+}
 
 .footer-text {
     width: 373px;
