@@ -181,6 +181,14 @@ img {
     text-decoration: none;
 }
 
+.button-learn-more:hover {
+    background-color: var(--bottom-medium-red);
+}
+
+.button-learn-more:focus {
+    background-color: var(--bottom-red);
+}
+
 /*сам слайд*/
 
 .container {
@@ -216,12 +224,28 @@ img {
     color: var(--main-bg-color);
 }
 
+.button-red:hover {
+    background-color: var(--bottom-medium-red);
+}
+
+.button-red:focus {
+    background-color: var(--bottom-red);
+}
+
 .button-green {
     background: var(--bottom-light-green);
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
     color: var(--main-bg-color);
+}
+
+.button-green:hover {
+    background-color: var(--bottom-medium-green);
+}
+
+.button-green:focus {
+    background-color: var(--bottom-green);
 }
 
 .button-yellow {
@@ -232,6 +256,14 @@ img {
     color: var(--main-bg-color);
 }
 
+.button-yellow:hover {
+    background-color: var(--bottom-medium-yellow);
+}
+
+.button-yellow:focus {
+    background-color: var(--bottom-yellow);
+}
+
 .service-list p {
     font-size: 16px;
     line-height: 24px;
@@ -239,6 +271,13 @@ img {
 }
 
 /*стиль полосок*/
+
+.rectangle {
+    border-top: 2px solid #EEEEEE;
+    width: 1158px;
+    left: 140px;
+    top: 1579px;
+}
 
 .about {
     background: var(--main-bg-color);
@@ -255,7 +294,10 @@ img {
     color: #283136;
 }
 
-.order-list li {}
+.rectangle-1 li {
+    height: 2px;
+    width: 25px;
+}
 
 .mini-title-about {
     text-transform: uppercase;
@@ -309,7 +351,17 @@ img {
     list-style: none;
 }
 
-.logo-1-1 {}
+.logo-1-1:hover {
+    background-image: url(img/Group 5.svg);
+}
+
+.logo-1-1:focus {
+    background-image: url(img/Group 5_1.svg);
+}
+
+.logo-1-2:hover {
+    background-image: url(img/logo-2 2.png);
+}
 
 .page-footer {
     outline: 5px solid rgba(0, 255, 255, 0.7);
@@ -324,10 +376,17 @@ img {
 
 /*кнопки соц сетей*/
 
+.social-button:hover{
+
+}
+
 .footer-social li {
     outline: 5px solid rgba(0, 255, 255, 0.7);
-    background-color: var(--social-bg-grey-color);
+    background-color: var(--bottom-social);
     border-radius: 50%;
+    width: 81px;
+    height: 81px;
+    list-style: none;
 }
 
 /*фон карты*/
