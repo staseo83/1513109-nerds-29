@@ -30,6 +30,8 @@
     --bottom-medium-yellow: #EAB534;
     --bottom-light-yellow: #EFC849;
     --bottom-social: #E1E1E1;
+    --text-list-service: #283136;
+    --text-map: #666666;
     /* цвета фильтра */
     --path: #4D4D4D;
     --shape1: #231F20;
@@ -43,7 +45,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Tahoma", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     font-weight: normal;
     text-transform: none;
@@ -81,12 +83,30 @@ img {
     color: var(--main-txt-color);
 }
 
-.site-navigation a:hover, .cart-link:hover {
+.site-navigation a:focus {
     color: var(--bottom-light-red);
 }
-
-.site-navigation a:focus, .cart-link:focus {
+.site-navigation a:hover {
+    color: var(--bottom-light-red);
+}
+.site-navigation a:active {
     color: var(--social-bg-grey-color);
+}
+.cart-link:focus {
+    color: var(--bottom-light-red);
+}
+.cart-link:hover {
+    color: var(--bottom-light-red);
+}
+.cart-link:active {
+    color: var(--social-bg-grey-color);
+}
+.site-navigation-catalog {
+    text-decoration: none;
+    border-bottom: 1px solid red;
+    padding-bottom: 2px;
+    width: 112px;
+    height: 2px;
 }
 
 /*Стиль логотипа в шапке*/
@@ -100,30 +120,22 @@ img {
 .main-header-logo a:hover {
     color: var(--main-txt-color);
 }
-
 .main-header-logo a:focus {
-    color: var(--social-bg-grey-color);
-    background-image: url("img/nerds-logo gray.svg");
+    color: var(--main-txt-color);
+}
+.main-header-logo a:active {
+    opacity: 0.2;
 }
 
 /*Общий стиль горизонтального меню*/
 
 /*Стиль разделов меню*/
 
-.site-navigation {
+
+.site-navigation li {
     text-transform: uppercase;
     list-style: none;
 }
-
-.site-navigation-current a:not([href]) {
-    background-color: var(--basic-black);
-}
-
-.site-navigation-item {
-    text-transform: uppercase;
-    list-style: none;
-}
-
 /*Стиль значка корзины*/
 
 .cart-link {
@@ -143,7 +155,8 @@ img {
     background-color: var(--grey-lihgt-btn-color);
 }
 
-.hello-slider {
+.title-slider {
+    margin: 0%;
     outline: 5px solid rgba(255, 208, 0, 0.753);
     width: 538px;
     height: 111px;
@@ -153,6 +166,9 @@ img {
     font-weight: 500;
     font-size: 55px;
     line-height: 55px;
+    align-items: center;
+    text-transform: none;
+    color: var(--main-txt-color);
 }
 
 .text-slider {
@@ -162,6 +178,8 @@ img {
     top: 328px;
     line-height: 24px;
     font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
 }
 
 .button-learn-more {
@@ -184,9 +202,12 @@ img {
 .button-learn-more:hover {
     background-color: var(--bottom-medium-red);
 }
-
 .button-learn-more:focus {
+    background-color: var(--bottom-medium-red);
+}
+.button-learn-more a:active {
     background-color: var(--bottom-red);
+    opacity: 0.2;
 }
 
 /*сам слайд*/
@@ -199,7 +220,7 @@ img {
     background: var(--main-bg-color);
 }
 
-.service-list {
+.main-service ul {
     list-style: none;
 }
 
@@ -227,8 +248,10 @@ img {
 .button-red:hover {
     background-color: var(--bottom-medium-red);
 }
-
 .button-red:focus {
+    background-color: var(--bottom-medium-red);
+}
+.button-red:active {
     background-color: var(--bottom-red);
 }
 
@@ -243,8 +266,11 @@ img {
 .button-green:hover {
     background-color: var(--bottom-medium-green);
 }
-
 .button-green:focus {
+    background-color: var(--bottom-medium-green);
+}
+
+.button-green:active {
     background-color: var(--bottom-green);
 }
 
@@ -259,8 +285,10 @@ img {
 .button-yellow:hover {
     background-color: var(--bottom-medium-yellow);
 }
-
 .button-yellow:focus {
+    background-color: var(--bottom-medium-yellow);
+}
+.button-yellow:active {
     background-color: var(--bottom-yellow);
 }
 
@@ -289,19 +317,30 @@ img {
     line-height: 45px;
 }
 
-.order-list {
-    list-style: none;
-    color: #283136;
-}
-
-.rectangle-1 li {
-    height: 2px;
-    width: 25px;
-}
-
-.mini-title-about {
-    text-transform: uppercase;
+.about h3 {
+    font-family: "Roboto", "Tahoma", sans-serif;
     font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.list-services li {
+    font-style: normal;
+    color: var(--text-list-service);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none;
+}
+
+.description-about {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    color: var(--text-list-service);
 }
 
 .title-about {
@@ -343,28 +382,56 @@ img {
 
 /*Класс логотипы партнеров*/
 
-.partner-logos {}
+.logo-html-acadevy {
+    opacity: 0.2;
+}
 
-/*лого mishka*/
+.logo-html-acadevy:hover, :focus {
+    opacity: 1;
+}
+
+.logo-html-acadevy:active {
+    opacity: 0.1;
+}
+
+.logo-borodinski {
+    opacity: 0.2;
+}
+
+.logo-borodinski:hover, :focus {
+    opacity: 1;
+}
+
+.logo-borodinski:active {
+    opacity: 0.1;
+}
+
+.logo-pinc {
+    opacity: 0.2;
+}
+
+.logo-pinc:hover, :focus {
+    opacity: 1;
+}
+
+.logo-pinc:active {
+    opacity: 0.1;
+}
+
+.logo-mishutka {
+    opacity: 0.2;
+}
+
+.logo-mishutka:hover, :focus {
+    opacity: 1;
+}
+
+.logo-mishutka:active {
+    opacity: 0.1;
+}
 
 .list-logo {
     list-style: none;
-}
-
-.logo-1-1:hover {
-    background-image: url(img/Group 5.svg);
-}
-
-.logo-1-1:focus {
-    background-image: url(img/Group 5_1.svg);
-}
-
-.logo-1-2:hover {
-    background-image: url(img/logo-2 2.png);
-}
-
-.page-footer {
-    outline: 5px solid rgba(0, 255, 255, 0.7);
 }
 
 .map {
@@ -374,24 +441,102 @@ img {
     top: 1843px;
 }
 
-/*кнопки соц сетей*/
-
-.social-button:hover{
-
+.text-map {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    color: var(--text-map);
 }
 
-.footer-social li {
-    outline: 5px solid rgba(0, 255, 255, 0.7);
-    background-color: var(--bottom-social);
-    border-radius: 50%;
-    width: 81px;
-    height: 81px;
+.contacts-phone {
+    list-style: none;
+    color: var(--text-map);
+}
+
+.button-contacts {
+    list-style: none;
+    width: 219px;
+    height: 50px;
+    left: 190px;
+    top: 2108px;
+    background: var(--bottom-light-red);
+    border-radius: 3px;
+    color: var(--main-bg-color);
+}
+
+.footer-social ul {
+    text-align: left;
     list-style: none;
 }
 
-/*фон карты*/
+.social-button-vk {
+    background-color: var(--bottom-social);
+    border-radius: 50%;
+    width: 81x;
+    height: 81px;
+}
+
+.social-button-vk:hover {
+    background-color: var(--bottom-medium-red);
+}
+.social-button-vk:focus {
+    background-color: var(--bottom-medium-red);
+}
+
+.social-button-vk:active {
+    background-color: var(--bottom-red);
+}
+
+.social-button-vk:active a {
+    opacity: 0.2;
+}
+.social-button-fb {
+    background-color: var(--bottom-social);
+    border-radius: 50%;
+    width: 81x;
+    height: 81px;
+}
+
+.social-button-fb:hover {
+    background-color: var(--bottom-medium-red);
+}
+.social-button-fb:focus {
+    background-color: var(--bottom-medium-red);
+}
+.social-button-fb:active {
+    background-color: var(--bottom-red);
+}
+
+.social-button-fb:active a {
+    opacity: 0.2;
+}
+.social-button-in {
+    background-color: var(--bottom-social);
+    border-radius: 50%;
+    width: 81x;
+    height: 81px;
+}
+
+.social-button-in:hover {
+    background-color: var(--bottom-medium-red);
+}
+.social-button-in:focus {
+    background-color: var(--bottom-medium-red);
+}
+.social-button-in:active {
+    background-color: var(--bottom-red);
+}
+
+.social-button-in:active a {
+    opacity: 0.2;
+}
+/* Main footer */
 
 .main-footer {}
+
+.footer-info {}
 
 .footer-info h2 {
     font-weight: bold;
@@ -401,21 +546,32 @@ img {
 }
 
 .main-footer h3 {
+    font-family: Roboto;
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
     align-items: center;
     text-transform: uppercase;
+    display: flex;
 }
 
-.footer-text {
-    width: 373px;
-    height: 22px;
+.modal {
+    color: var(--basic-black);
+    background-color: var(--main-bg-color);
+    background-image: url("../img/pattern-light.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
-.modal-login {}
-
-.modal-description {}
+.modal h2 {
+    font-size: 30px;
+    font-family: "Roboto", "Tahoma", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: none;
+}
 
 .modal-close {}
 
