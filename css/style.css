@@ -78,7 +78,9 @@ img {
     line-height: 30px;
     font-weight: 500;
 }
-
+.site-navigation {
+    text-align:center;
+}
 .site-navigation a, .main-navigation a {
     color: var(--main-txt-color);
 }
@@ -117,14 +119,14 @@ img {
     outline-offset: -5px;
 }
 
-.main-header-logo a:hover {
+.main-header-logo:hover {
     color: var(--main-txt-color);
 }
-.main-header-logo a:focus {
+.main-header-logo:focus {
     color: var(--main-txt-color);
 }
 .main-header-logo a:active {
-    opacity: 0.2;
+    opacity: 1;
 }
 
 /*Общий стиль горизонтального меню*/
