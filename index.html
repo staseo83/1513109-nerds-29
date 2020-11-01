@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин «Nerds»</title>
@@ -19,8 +20,10 @@
         <li><a href="catalog.html">Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
-      <img class="cart-icon" src="img/cart.svg" width="15" height="15" alt="значек корзины">
-      <a class="cart-link" href="blank.html">Корзина</a>
+      <span class="cart">
+        <img class="cart-icon" src="img/cart.svg" width="15" height="15" alt="значек корзины">
+        <a class="cart-link" href="blank.html">Корзина</a>
+      </span>
     </nav>
   </header>
   <main class="container">
@@ -29,12 +32,12 @@
     <div class="main-slider-1">
       <span class="title-slider">
         <p>Долго, дорого,<br>скрупулезно</p>
-        </span>
-        <span class="text-slider">
-          <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения</p>
-        </span>
-        <span class="button-learn-more"><a href="blank.html">УЗНАТЬ БОЛЬШЕ</a></span>
-        <img class="slide1" src="img/nerds-index-slide1 1.png" width="760" height="430" alt="фото первого слайдера">
+      </span>
+      <span class="text-slider">
+        <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения</p>
+      </span>
+      <span class="button-learn-more"><a href="blank.html">УЗНАТЬ БОЛЬШЕ</a></span>
+      <img class="slide1" src="img/nerds-index-slide1 1.png" width="760" height="430" alt="фото первого слайдера">
     </div>
     <!--блок услуги 3 шт-->
     <section class="main-service">
@@ -64,8 +67,10 @@
     <section>
       <div class="about">
         <h2>Мы — маленькая, но гордая <br>дизайн-студия из Краснодара</h2>
-        <span class="description-about"><p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не
-          покладая рук, как роботы</p></span>
+        <span class="description-about">
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>превыше креатива. Работаем не
+            покладая рук, как роботы</p>
+        </span>
         <h3>Выполняем заказы на разработку:</h3>
         <ul class="list-services">
           <li>Веб-сайтов любой сложности</li>
@@ -75,8 +80,7 @@
       </div>
     </section>
     <section class="advantages">
-      <img class="advantages-logo" src="img/nerds-illustration 1.jpg" width="360" height="208"
-        alt="логотип Нердс">
+      <img class="advantages-logo" src="img/nerds-illustration 1.jpg" width="360" height="208" alt="логотип Нердс">
       <span class="title-advantages">с 2004 года Любим точность во всем:</span>
       <ul class="advantages-list">
         <li>
@@ -102,10 +106,11 @@
     <h2>Логотипы партнеров</h2>
     <section class="partner-logos">
       <ul class="list-logo">
-        <li class="logo-html-acadevy"><a href="https://htmlacademy.ru/profession/frontender"><img src="img/Group 5.svg" width="199"
-              height="90" alt="логотип html acadevy"></a>
+        <li class="logo-html-acadevy"><a href="https://htmlacademy.ru/profession/frontender"><img src="img/Group 5.svg"
+              width="199" height="90" alt="логотип html acadevy"></a>
         </li>
-        <li class="logo-borodinski"><img src="img/logo-borodinski.png" width="199" height="90" alt="лого borodinski"></li>
+        <li class="logo-borodinski"><img src="img/logo-borodinski.png" width="199" height="90" alt="лого borodinski">
+        </li>
         <li class="logo-pinc"><img src="img/logo-pinc.png" width="199" height="90" alt="лого pink">
         </li>
         <li class="logo-mishutka"><img src="img/logo-mishutka.png" width="199" height="90" alt="лого mishka">
@@ -120,7 +125,8 @@
     <h3>NЁRDS DESIGN STUDIO</h3>
     <div class="text-map">
       <p>101196, Санкс-Петербург,<br>
-        ул. Б. Конюшенная, д. 19/8<br><br>тел: <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+        ул. Б. Конюшенная, д. 19/8<br><br>тел: <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
+      </p>
       <a class="button-contacts" href="blank.html">НАПИШИТЕ НАМ</a>
     </div>
     <div class="footer-social">
@@ -149,12 +155,14 @@
       <p>Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+  <!--
   <section class="modal">
-    <h2>Личный кабинет</h2>
-    <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-    <!--Здесь будет форма логин-->
+    <h2>Напишите нам</h2>
+    <p>Заполните пож-та поля формы</p>
+    Здесь будет форма связи
     <button class="modal-close" type="button">Закрыть</button>
   </section>
+-->
 </body>
 
 </html>

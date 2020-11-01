@@ -78,9 +78,11 @@ img {
     line-height: 30px;
     font-weight: 500;
 }
+
 .site-navigation {
-    text-align:center;
+    text-align: center;
 }
+
 .site-navigation a, .main-navigation a {
     color: var(--main-txt-color);
 }
@@ -88,25 +90,31 @@ img {
 .site-navigation a:focus {
     color: var(--bottom-light-red);
 }
+
 .site-navigation a:hover {
     color: var(--bottom-light-red);
 }
+
 .site-navigation a:active {
     color: var(--social-bg-grey-color);
 }
+
 .cart-link:focus {
     color: var(--bottom-light-red);
 }
+
 .cart-link:hover {
     color: var(--bottom-light-red);
 }
+
 .cart-link:active {
     color: var(--social-bg-grey-color);
 }
+
 .site-navigation-catalog {
     text-decoration: none;
     border-bottom: 1px solid red;
-    padding-bottom: 2px;
+    padding-bottom: 6px;
     width: 112px;
     height: 2px;
 }
@@ -122,26 +130,29 @@ img {
 .main-header-logo:hover {
     color: var(--main-txt-color);
 }
+
 .main-header-logo:focus {
     color: var(--main-txt-color);
 }
+
 .main-header-logo a:active {
-    opacity: 1;
+    opacity: 0.2;
 }
 
 /*Общий стиль горизонтального меню*/
 
 /*Стиль разделов меню*/
 
-
 .site-navigation li {
     text-transform: uppercase;
     list-style: none;
 }
+
 /*Стиль значка корзины*/
 
 .cart-link {
     text-transform: uppercase;
+    text-align: center;
 }
 
 /* иконка корзины */
@@ -204,9 +215,11 @@ img {
 .button-learn-more:hover {
     background-color: var(--bottom-medium-red);
 }
+
 .button-learn-more:focus {
     background-color: var(--bottom-medium-red);
 }
+
 .button-learn-more a:active {
     background-color: var(--bottom-red);
     opacity: 0.2;
@@ -250,9 +263,11 @@ img {
 .button-red:hover {
     background-color: var(--bottom-medium-red);
 }
+
 .button-red:focus {
     background-color: var(--bottom-medium-red);
 }
+
 .button-red:active {
     background-color: var(--bottom-red);
 }
@@ -268,6 +283,7 @@ img {
 .button-green:hover {
     background-color: var(--bottom-medium-green);
 }
+
 .button-green:focus {
     background-color: var(--bottom-medium-green);
 }
@@ -287,9 +303,11 @@ img {
 .button-yellow:hover {
     background-color: var(--bottom-medium-yellow);
 }
+
 .button-yellow:focus {
     background-color: var(--bottom-medium-yellow);
 }
+
 .button-yellow:active {
     background-color: var(--bottom-yellow);
 }
@@ -327,13 +345,25 @@ img {
     text-transform: uppercase;
 }
 
-.list-services li {
+.list-services {
     font-style: normal;
     color: var(--text-list-service);
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     text-transform: none;
+    list-style: none;
+}
+
+.list-services li:before {
+    transform: rotate(90deg);
+    position: absolute;
+    list-style: none;
+    content: '';
+    height: 25px;
+    width: 2px;
+    left: 140px;
+    background-color: var(--bottom-light-red);
 }
 
 .description-about {
@@ -483,6 +513,7 @@ img {
 .social-button-vk:hover {
     background-color: var(--bottom-medium-red);
 }
+
 .social-button-vk:focus {
     background-color: var(--bottom-medium-red);
 }
@@ -494,6 +525,7 @@ img {
 .social-button-vk:active a {
     opacity: 0.2;
 }
+
 .social-button-fb {
     background-color: var(--bottom-social);
     border-radius: 50%;
@@ -504,9 +536,11 @@ img {
 .social-button-fb:hover {
     background-color: var(--bottom-medium-red);
 }
+
 .social-button-fb:focus {
     background-color: var(--bottom-medium-red);
 }
+
 .social-button-fb:active {
     background-color: var(--bottom-red);
 }
@@ -514,6 +548,7 @@ img {
 .social-button-fb:active a {
     opacity: 0.2;
 }
+
 .social-button-in {
     background-color: var(--bottom-social);
     border-radius: 50%;
@@ -524,9 +559,11 @@ img {
 .social-button-in:hover {
     background-color: var(--bottom-medium-red);
 }
+
 .social-button-in:focus {
     background-color: var(--bottom-medium-red);
 }
+
 .social-button-in:active {
     background-color: var(--bottom-red);
 }
@@ -534,6 +571,7 @@ img {
 .social-button-in:active a {
     opacity: 0.2;
 }
+
 /* Main footer */
 
 .main-footer {}
@@ -558,24 +596,66 @@ img {
 }
 
 .modal {
-    color: var(--basic-black);
+    color: var(--main-txt-color);
     background-color: var(--main-bg-color);
-    background-image: url("../img/pattern-light.jpg");
     background-position: 0 0;
-    background-repeat: repeat;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 960px;
+    height: 590px;
+    left: 240px;
+    top: 1706px;
 }
 
 .modal h2 {
-    font-size: 30px;
-    font-family: "Roboto", "Tahoma", sans-serif;
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: normal;
-    text-transform: none;
+    width: 311px;
+    height: 53px;
+    left: 340px;
+    top: 1769px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
 }
 
-.modal-close {}
+.modal-close {
+    color: var(--bottom-light-red);
+    opacity: 0.2;
+    width: 21px;
+    height: 21px;
+    left: 1089px;
+    top: 1784px;
+}
+
+.modal-close a:hover {
+    opacity: 1;
+}
+
+.modal-close a:focus {
+    opacity: 1;
+}
+
+.modal-close a:active {
+    opacity: 0.1;
+}
+
+.modal-close:before, .modal-close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: var(--bottom-light-red);
+}
+
+.modal-close:before {
+    transform: rotate(45deg);
+}
+
+.modal-close:after {
+    transform: rotate(-45deg);
+}
 
 .filter {
     outline-offset: -5px;
