@@ -11,35 +11,32 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-navigation">
-      <span class="main-header-logo"><a href="index.html">
+      <a class="main-header-logo" href="index.html">
           <img src="img/nerds-logo.svg" width="159.87" height="65.02" alt="логотип Нердс в SVG">
         </a>
-      </span>
       <ul class="site-navigation">
         <li><a href="blank.html">Студия</a></li>
         <li><a href="blank.html">Клиенты</a></li>
         <li><a class="site-navigation-active" href="blank.html">Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
-      <span class="cart">
-        <a class="cart-link" href="blank.html">Корзина</a>
-      </span>
     </nav>
+    <a class="cart-link" href="blank.html">Корзина</a>
     <span class="catalog-tite">
       <h1>Магазин готовых шаблонов</h1>
     </span>
   </header>
   <main>
-    <span class="sort">
+    <div class="sort">
       <h3>сортировать</h3>
       <ul>
-        <li><a href="blank.html"></a>по цене</li>
-        <li><a href="blank.html"></a>по типу</li>
-        <li><a href="blank.html"></a>по названию</li>
+        <li><a href="blank.html">по цене</a></li>
+        <li><a href="blank.html">по типу</a></li>
+        <li><a href="blank.html">по названию</a></li>
       </ul>
-    </span>
+    </div>
         <!-- Здесь будет форма фильтра -->
-        <section class="filters">
+        <div class="filters">
           <h3>стоимость</h3>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
@@ -92,11 +89,9 @@
                 </li>
               </ul>
             </fieldset>
-            <span class="filter-button">
-            <a href="blank.html">Показать</a>
-          </span>
+            <button class="filter-button">Показать</button></a>
           </form>
-        </section>
+        </div>
     <!--список готовых шаблонов-->
     <section>
       <ul class="templates">
