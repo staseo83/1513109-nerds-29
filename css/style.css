@@ -111,7 +111,7 @@ img {
     color: var(--social-bg-grey-color);
 }
 
-.site-navigation-catalog {
+.site-navigation-active {
     text-decoration: none;
     border-bottom: 1px solid red;
     padding-bottom: 6px;
@@ -157,7 +157,7 @@ img {
 
 /* иконка корзины */
 
-.cart-icon {
+.cart:before {
     left: 1185px;
     top: 82px;
 }
@@ -406,7 +406,7 @@ img {
     text-transform: uppercase;
 }
 
-.cif {
+.advantages-numbers {
     font-weight: bold;
     font-size: 45px;
     line-height: 64px;
@@ -574,10 +574,6 @@ img {
 
 /* Main footer */
 
-.main-footer {}
-
-.footer-info {}
-
 .footer-info h2 {
     font-weight: bold;
     font-size: 36px;
@@ -657,6 +653,17 @@ img {
     transform: rotate(-45deg);
 }
 
+.catalog-tite h1 {
+    width: 727px;
+    height: 55px;
+    left: 357px;
+    top: 192px;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    align-items: center;
+}
+
 .filter {
     outline-offset: -5px;
     outline: 5px solid rgba(255, 0, 255, 0.7);
@@ -669,4 +676,160 @@ img {
 
 .filter fieldset:first-child {
     margin-bottom: 35px;
+}
+
+.filters {
+    list-style: none;
+}
+
+.filters h3 {
+    width: 115px;
+    height: 30px;
+    left: 140px;
+    top: 410px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.sort li {
+    opacity: 0.3;
+    list-style: none;
+}
+
+.sort li:hover {
+    opacity: 0.6;
+}
+
+.sort li:focus {
+    opacity: 0.6;
+}
+
+.sort li:active {
+    opacity: 1;
+}
+
+.sort h3 {
+    width: 134px;
+    height: 30px;
+    left: 540px;
+    top: 410px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.sort li {
+    text-transform: uppercase;
+}
+
+/* Filters */
+
+.title-filters {
+    text-transform: uppercase;
+}
+
+.templates {
+    list-style: none;
+}
+
+.filter-button {
+    width: 260px;
+    height: 50px;
+    left: 140px;
+    top: 1140px;
+    border-radius: 3px;
+}
+
+.filter-button a {
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-grey-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+}
+
+.filter-button a:hover {
+    opacity: 0.3;
+    background-color: var(--grey-medium-btn-color);
+}
+
+.filter-button a:focus {
+    opacity: 0.3;
+    background-color: var(--grey-medium-btn-color);
+}
+
+.filter-button a:active {
+    opacity: 0.3;
+    background-color: var(--grey-btn-color);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
+
+.filter-input-checkbox {
+    color: var(--path);
+    opacity: 0.4;
+    height: 25px;
+    width: 25px;
+    left: 278px;
+    top: 2256px;
+    border-radius: 0px;
+    list-style: none;
+}
+.filter-input-radio {
+    color: var(--path);
+    opacity: 0.4;
+    height: 25px;
+    width: 25px;
+    left: 278px;
+    top: 2256px;
+    border-radius: 0px;
+    list-style: none;
+}
+
+.filter-input-checkbox:hover {
+    color: var(--path);
+}
+.filter-input-checkbox:focus {
+    color: var(--path);
+}
+.filter-input-checkbox:active {
+    opacity: 0.1;
+}
+
+.filter legend:active {
+    opacity: 0.3;
+}
+
+.filter ul {
+    list-style: none;
+    line-height: 19px;
+    color: var(--text-list-service);
+}
+
+.filters label {
+    color: var(--text-list-service);
+}
+
+.label:hover {
+    color: var(--text-list-service);
+}
+
+.label:focus {
+    color: var(--text-list-service);
+}
+
+.label:active {
+    mix-blend-mode: normal;
+    opacity: 0.3;
 }
