@@ -33,6 +33,7 @@
     --text-list-service: #283136;
     --text-map: #666666;
     --text-social: #444444;
+    --pagination-active: #DBDBDB;
     /* цвета фильтра */
     --path: #4D4D4D;
     --shape1: #231F20;
@@ -82,6 +83,9 @@ img {
 
 .site-navigation {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 5px solid #ff0000;
 }
 
 .site-navigation a, .main-navigation a {
@@ -93,6 +97,8 @@ img {
     top: 0px;
     font-weight: 500;
     line-height: 30px;
+    display: block;
+    padding: 75px 45px;
 }
 
 .site-navigation a:focus {
@@ -160,25 +166,35 @@ img {
 
 /*Стиль значка корзины*/
 
+.user-navigation {
+    max-width: 140px;
+    outline: 5px solid #ff0000;
+}
+
 .cart-link {
     text-transform: uppercase;
+    position: relative;
     line-height: 30px;
     font-style: normal;
     font-weight: 500;
     text-align: right;
     text-decoration: none;
+    display: block;
     list-style: none;
     color: var(--main-txt-color);
-}
-
-.cart-link:before {
-    content: "";
-    display: block;
     width: 15px;
     height: 15px;
-    left: 0;
-    right: 0;
-    top: 0x;
+    left: 1185px;
+}
+
+.cart-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 27px;
+    left: 24px;
     background-image: url(img/cart-icon.png);
 }
 
@@ -691,9 +707,106 @@ img {
     align-items: center;
 }
 
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* Для демонстрации */
+    width: 260px;
+    margin: 50px auto;
+}
+
+.range-filter {
+    width: 260px;
+    margin-top: 49px;
+}
+
+.filter-item legend {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+    left: 18px;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-controls label {
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.price-controls input {
+    width: 60px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .filter {
     outline-offset: -5px;
     outline: 5px solid rgba(255, 0, 255, 0.7);
+}
+
+.filter fieldset {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    border: none;
+    color: var(--path);
 }
 
 .filter-option-label {
@@ -707,6 +820,7 @@ img {
 
 .filters {
     list-style: none;
+    width: 260px;
 }
 
 .filters h3 {
@@ -726,6 +840,8 @@ img {
 .sort li {
     opacity: 0.3;
     list-style: none;
+    color: var( --main-txt-color);
+    margin-right: 42px;
 }
 
 .sort li:hover {
@@ -765,42 +881,6 @@ img {
 
 .templates {
     list-style: none;
-}
-
-.filter-button {
-    width: 260px;
-    height: 50px;
-    left: 140px;
-    top: 1140px;
-    border-radius: 3px;
-}
-
-.filter-button a {
-    color: var(--main-txt-color);
-    background-color: var(--main-bg-grey-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 18px;
-    align-items: center;
-    text-align: center;
-}
-
-.filter-button a:hover {
-    opacity: 0.3;
-    background-color: var(--grey-medium-btn-color);
-}
-
-.filter-button a:focus {
-    opacity: 0.3;
-    background-color: var(--grey-medium-btn-color);
-}
-
-.filter-button a:active {
-    opacity: 0.3;
-    background-color: var(--grey-btn-color);
-    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-    border-radius: 3px;
 }
 
 .filter-input-checkbox {
@@ -845,6 +925,8 @@ img {
     list-style: none;
     line-height: 19px;
     color: var(--text-list-service);
+    padding: 0;
+    margin: 0;
 }
 
 .filters label {
@@ -862,4 +944,98 @@ img {
 .label:active {
     mix-blend-mode: normal;
     opacity: 0.3;
+}
+
+.filter-button {
+    width: 260px;
+    height: 50px;
+    left: 140px;
+    top: 1140px;
+    border-radius: 3px;
+}
+
+.filter-button a {
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-grey-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 18px;
+    align-items: center;
+    text-align: center;
+}
+
+.filter-button a:hover {
+    opacity: 0.3;
+    background-color: var(--grey-medium-btn-color);
+}
+
+.filter-button a:focus {
+    opacity: 0.3;
+    background-color: var(--grey-medium-btn-color);
+}
+
+.filter-button a:active {
+    opacity: 0.3;
+    background-color: var(--grey-btn-color);
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+    border-radius: 3px;
+}
+
+.pagination-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination-item a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-grey-color);
+    border-radius: 3px;
+    line-height: 18px;
+    display: block;
+    padding: 10px 19px;
+}
+
+.pagination-item:last-child {
+    margin-right: 0;
+}
+
+.pagination-item a:hover {
+    background-color: var(--grey-medium-btn-color);
+}
+
+.pagination-item a:focus {
+    background-color: var(--grey-medium-btn-color);
+}
+
+.pagination-item a:active {
+    background-color: var(--grey-btn-color);
+}
+
+.pagination-item-current a {
+    background: rgba(0, 0, 0, 0.0001);
+    border: 3px solid #DBDBDB;
+    box-sizing: border-box;
+}
+
+.pagination-item {
+    margin-right: 5px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
